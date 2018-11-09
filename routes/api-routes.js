@@ -49,12 +49,7 @@ module.exports = function(app) {
 
   app.post('/api/users', function(req, res) {
     db.users.create(req.body).then(function(dbusers) {
-      if(dbusers.length > 1){
       res.json({success:true, user:dbusers});
-      }
-      else{
-        res.json({success:false});
-      }
     }).catch(function(error) {
       res.json({ error: error });
     });

@@ -23,7 +23,7 @@ console.log(users);
        window.location.replace("/")
         }
         else{
-            alert("Please try again")
+            alert("Please enter a valid email and password")
         }
       });
     
